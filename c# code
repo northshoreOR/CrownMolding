@@ -1,0 +1,70 @@
+namespace CrownMolding
+{
+    public class Formulas
+    {
+        //set up private properties
+        private double _wallAngle;
+        private double _springAngle;
+        private double _miterAngle;
+        private double _bevelAngle;
+
+        private double _degreesToRadions = Math.PI / 180;
+        private double _radionsToDegrees = 180 / Math.PI;
+
+        //set up public properties
+        public double WallAngle
+        {
+            get { return _wallAngle; }
+            set { _wallAngle = value; }
+        }
+
+        
+        public double SpringAngle
+        {
+            get { return _springAngle; }
+            set { _springAngle = value; }
+        }
+
+        public double MiterAngle
+        {
+            get { return _miterAngle; }
+            set { _miterAngle = value; }
+        }
+
+        public double BevelAngle
+        {
+            get { return _bevelAngle; }
+            set { _bevelAngle = value; }
+        }
+
+
+        //Calculate the miter angle 
+        public double findMiterAngle(double _wallAngle, double _springAngle)
+        {
+            _miterAngle = Math.Round((Math.Atan(Math.Sin(_springAngle * _degreesToRadions) / (Math.Tan((_wallAngle/2 ) * _degreesToRadions))) * _radionsToDegrees), 1);
+            return _miterAngle ;
+        }
+        
+        //Calculate the belvel angle
+        public double findBevelAngle(double _wallAngle, double _springAngle)
+        {
+            _bevelAngle = Math.Round((Math.Asin(Math.Cos(_springAngle * Math.PI / 180) * Math.Cos(_wallAngle * Math.PI / 180 / 2))) * (_radionsToDegrees), 1);
+
+            return _bevelAngle;
+        }
+        
+    }
+}
+
+
+/*
+Crown Miter Angle = arctan (sin( Spring Angle) ÷ tan ( Wall Corner Angle ÷ 2 ))
+Crown Miter Angle = arctan (sin( 38°) ÷ tan( 45°)) = 31.62°
+ 
+Crown Bevel Angle = arcsin (cos( Spring Angle ) * cos( Wall Corner Angle ÷ 2 ))
+Crown Bevel Angle = arcsin (cos( 38°) * cos( 45°)) = 33.86°
+
+
+Multiply the return value by 180/Math.PI to convert from radians to degrees.
+
+ */
