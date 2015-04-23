@@ -1,0 +1,345 @@
+namespace CrownMoldingUnitTest
+{
+    [TestClass]
+    public class FormulaTests
+    {
+
+        [TestMethod]
+        public void TestMethodMiterAngle_180_38()
+        {
+            //arrange
+            double wallAngle = 180;
+            double springAngle = 38;
+            double expected = 0;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodMiterAngle_120_38()
+        {
+            //arrange
+            double wallAngle = 120;
+            double springAngle = 38;
+            double expected = 19.6;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodMiterAngle_90_38()
+        {
+            //arrange
+            double wallAngle = 90;
+            double springAngle = 38;
+            double expected = 31.6;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodMiterAngle_60_38()
+        {
+            //arrange
+            double wallAngle = 60;
+            double springAngle = 38;
+            double expected = 46.8;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodBevelAngle_180_38()
+        {
+            //arrange
+            double wallAngle = 180;
+            double springAngle = 38;
+            double expected = 0;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodBevelAngle_120_38()
+        {
+            //arrange
+            double wallAngle = 120;
+            double springAngle = 38;
+            double expected = 23.2;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodBevelAngle_90_38()
+        {
+            //arrange
+            double wallAngle = 90;
+            double springAngle = 38;
+            double expected = 33.9;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodBevelAngle_60_38()
+        {
+            //arrange
+            double wallAngle = 60;
+            double springAngle = 38;
+            double expected = 43.0;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodMiterAngle_180_45()
+        {
+            //arrange
+            double wallAngle = 180;
+            double springAngle = 45;
+            double expected = 0;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodMiterAngle_120_45()
+        {
+            //arrange
+            double wallAngle = 120;
+            double springAngle = 45;
+            double expected = 22.2;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+         	  	 	
+        [TestMethod]
+        public void TestMethodMiterAngle_90_45()
+        {
+            //arrange
+            double wallAngle = 90;
+            double springAngle = 45;
+            double expected = 35.3;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodMiterAngle_60_45()
+        {
+            //arrange
+            double wallAngle = 60;
+            double springAngle = 45;
+            double expected = 50.8;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findMiterAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.MiterAngle;
+            Assert.AreEqual(expected, actual, "Miter Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodBevelAngle_180_45()
+        {
+            //arrange
+            double wallAngle = 180;
+            double springAngle = 45;
+            double expected = 0;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+         	
+        [TestMethod]
+        public void TestMethodBevelAngle_120_45()
+        {
+            //arrange
+            double wallAngle = 120;
+            double springAngle = 45;
+            double expected = 20.7;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodBevelAngle_90_45()
+        {
+            //arrange
+            double wallAngle = 90;
+            double springAngle = 45;
+            double expected = 30.0;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+
+        [TestMethod]
+        public void TestMethodBevelAngle_60_45()
+        {
+            //arrange
+            double wallAngle = 60;
+            double springAngle = 45;
+            double expected = 37.8;
+
+            Formulas formula = new Formulas();
+            formula.SpringAngle = springAngle;
+            formula.WallAngle = wallAngle;
+
+            //act
+            formula.findBevelAngle(wallAngle, springAngle);
+
+            //assert
+            double actual = formula.BevelAngle;
+            Assert.AreEqual(expected, actual, "Bevel Angles are equal");
+
+        }
+
+
+    }
+}
